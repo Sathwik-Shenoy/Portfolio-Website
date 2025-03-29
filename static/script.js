@@ -100,4 +100,14 @@ projectsContainer.addEventListener('scroll', () => {
 });
 
 // Initialize scroll indicators
-scrollLeftBtn.style.opacity = '0.5'; 
+scrollLeftBtn.style.opacity = '0.5';
+
+// Ensure page starts from top when loaded
+window.addEventListener('load', function() {
+    // Remove any hash from the URL
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+    // Scroll to top
+    window.scrollTo(0, 0);
+}); 
