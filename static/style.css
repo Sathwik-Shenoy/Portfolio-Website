@@ -589,6 +589,7 @@ header.scrolled {
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
     transform: translateY(100%);
+    z-index: 1;
 }
 
 .project-card:hover .project-overlay {
