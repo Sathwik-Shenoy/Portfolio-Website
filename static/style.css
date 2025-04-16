@@ -3,7 +3,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important; /* Hide default cursor */
+}
+
+/* Enable custom cursor only for non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    * {
+        cursor: none !important;
+    }
+
+    .cursor {
+        width: 8px;
+        height: 8px;
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.2s ease;
+        box-shadow: 0 0 10px var(--secondary-color);
+        transform: translate(-50%, -50%);
+    }
+
+    .cursor-follower {
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--secondary-color);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9998;
+        transition: transform 0.3s ease;
+        box-shadow: 0 0 20px var(--secondary-color);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* For touch devices, use default cursor */
+@media (hover: none) and (pointer: coarse) {
+    * {
+        cursor: auto !important;
+    }
+
+    .cursor,
+    .cursor-follower {
+        display: none !important;
+    }
 }
 
 :root {
