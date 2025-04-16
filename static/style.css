@@ -560,8 +560,10 @@ header.scrolled {
 
 .project-image {
     position: relative;
+    width: 100%;
     height: 250px;
     overflow: hidden;
+    background-color: var(--glass-bg);
 }
 
 .project-image img {
@@ -569,6 +571,8 @@ header.scrolled {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block;
+    background-color: var(--glass-bg);
 }
 
 .project-card:hover .project-image img {
@@ -1006,6 +1010,12 @@ footer::before {
         height: 200px;
     }
 
+    .project-image img {
+        object-fit: contain;
+        background-color: var(--glass-bg);
+        padding: 1rem;
+    }
+
     .project-content {
         padding: 1.5rem;
     }
@@ -1090,6 +1100,12 @@ footer::before {
         height: 180px;
     }
 
+    .project-image img {
+        object-fit: contain;
+        background-color: var(--glass-bg);
+        padding: 0.8rem;
+    }
+
     .project-links {
         bottom: 15px;
         right: 15px;
@@ -1156,6 +1172,16 @@ footer::before {
 
     .social-link {
         font-size: 1rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+
+    .project-image img {
+        object-fit: contain;
+        background-color: var(--glass-bg);
+        padding: 0.5rem;
     }
 }
 
