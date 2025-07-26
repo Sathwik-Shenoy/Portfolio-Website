@@ -112,12 +112,16 @@ header.scrolled {
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
-    box-shadow: var(--neon-shadow);
 }
 
-.nav-link:hover::before {
+.nav-link:hover::before,
+.nav-link.active::before {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.nav-link.active {
+    color: var(--accent-color);
 }
 
 .mobile-menu {
@@ -334,6 +338,81 @@ header.scrolled {
     transform: translateX(3px);
 }
 
+/* Flash Messages */
+.flash-messages {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flash-message {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border-left: 4px solid var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    max-width: 400px;
+    animation: slideInRight 0.3s ease;
+}
+
+.flash-success {
+    border-left-color: #10b981;
+}
+
+.flash-error {
+    border-left-color: #ef4444;
+}
+
+.flash-warning {
+    border-left-color: #f59e0b;
+}
+
+.flash-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: var(--transition);
+    margin-left: 1rem;
+}
+
+.flash-close:hover {
+    color: var(--accent-color);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .flash-messages {
+        right: 10px;
+        left: 10px;
+    }
+    
+    .flash-message {
+        min-width: auto;
+        max-width: none;
+    }
+}
+
 .hero-image {
     position: relative;
 }
@@ -427,15 +506,38 @@ header.scrolled {
 }
 
 .project-card {
-    background: var(--glass-bg);
-    border-radius: 20px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--card-shadow);
-    transition: all 0.3s ease;
-    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
     position: relative;
     width: 400px;
     flex-shrink: 0;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    opacity: 0.05;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--hover-shadow);
+    border-color: var(--accent-color);
 }
 
 /* Scroll Indicators */
@@ -446,15 +548,15 @@ header.scrolled {
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     backdrop-filter: blur(5px);
 }
 
@@ -468,21 +570,21 @@ header.scrolled {
 
 .scroll-indicator-left:hover,
 .scroll-indicator-right:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    box-shadow: var(--neon-shadow);
+    background: var(--accent-color);
+    color: var(--background);
+    box-shadow: var(--card-shadow);
 }
 
 .scroll-indicator-left i,
 .scroll-indicator-right i {
     font-size: 1.5rem;
-    color: var(--secondary-color);
-    transition: all 0.3s ease;
+    color: var(--accent-color);
+    transition: var(--transition);
 }
 
 .scroll-indicator-left:hover i,
 .scroll-indicator-right:hover i {
-    color: var(--primary-color);
+    color: var(--background);
 }
 
 /* Responsive adjustments */
@@ -500,29 +602,6 @@ header.scrolled {
         width: 40px;
         height: 40px;
     }
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.project-card:hover::before {
-    opacity: 0.1;
-}
-
-.project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: var(--hover-shadow);
-    border-color: var(--secondary-color);
 }
 
 .project-image {
@@ -709,6 +788,35 @@ header.scrolled {
 
 .submit-btn:active {
     transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.submit-btn.loading {
+    pointer-events: none;
+}
+
+.submit-btn.loading span {
+    opacity: 0;
+}
+
+.submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--background);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .contact-info {

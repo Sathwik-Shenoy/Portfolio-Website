@@ -23,6 +23,101 @@ if (mobileMenu) {
     });
 }
 
+// Contact form enhancement
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        const submitBtn = this.querySelector('.submit-btn');
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+        
+        // Note: The form will submit normally, this just adds visual feedback
+    });
+}
+
+// Auto-hide flash messages
+document.addEventListener('DOMContentLoaded', function() {
+    const flashMessages = document.querySelectorAll('.flash-message');
+    flashMessages.forEach(message => {
+        setTimeout(() => {
+            if (message.parentElement) {
+                message.style.opacity = '0';
+                setTimeout(() => {
+                    message.remove();
+                }, 300);
+            }
+        }, 5000); // Auto-hide after 5 seconds
+    });
+});
+
+// Scroll-based navigation highlighting
+function updateActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNavigation);
+
+// Header scroll effect
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add scrolled class for styling
+    if (scrollTop > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
+// Typing animation for hero subtitle
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
+
+// Initialize typing animation when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (subtitle) {
+        const originalText = subtitle.textContent;
+        setTimeout(() => {
+            typeWriter(subtitle, originalText, 80);
+        }, 1000);
+    }
+});
+
 // Hide cursor when mouse leaves window
 document.addEventListener('mouseleave', () => {
     cursor.style.display = 'none';
