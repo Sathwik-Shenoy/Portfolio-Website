@@ -46,7 +46,7 @@ experience = [
         'description': 'Developed privacy-preserving federated learning systems and full-stack web applications. Specialized in PyTorch implementations and Flask-based platforms.',
         'achievements': [
             'Built federated learning framework achieving 93% accuracy',
-            'Developed scalable web applications serving 500+ users',
+            'Developed scalable web applications serving various users',
             'Implemented real-time ML systems with <500ms response times'
         ]
     }
