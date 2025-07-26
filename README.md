@@ -1,15 +1,29 @@
 # Personal Portfolio Website
 
-A modern, responsive portfolio website built with Flask, HTML, and CSS.
+A modern, responsive portfolio website built with Flask featuring professional design, interactive contact form, and comprehensive project showcase.
 
-## Features
+## ✨ Features
 
-- Responsive design that works on all devices
-- Project showcase section
-- Social media links
-- Resume download functionality
-- Contact information
-- Modern UI with smooth animations
+- **Modern Design**: Professional red/orange gradient color scheme
+- **Responsive Layout**: Works perfectly on all devices (desktop, tablet, mobile)
+- **Interactive Contact Form**: Working backend with flash message notifications
+- **Skills Showcase**: Organized technical skills by category
+- **Experience Section**: Professional work history and achievements
+- **Project Portfolio**: Detailed project descriptions with GitHub integration
+- **Resume Download**: One-click resume download functionality
+- **Social Integration**: Direct links to LinkedIn, GitHub, and email
+- **Smooth Animations**: Professional animations and hover effects
+- **Navigation Highlights**: Active section highlighting while scrolling
+- **SEO Optimized**: Proper meta tags and Open Graph integration
+
+## 🚀 Technologies Used
+
+- **Backend**: Flask (Python)
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Styling**: Custom CSS with CSS Grid and Flexbox
+- **Icons**: Font Awesome
+- **Fonts**: Google Fonts (Poppins, Space Grotesk)
+- **Animations**: CSS transitions and keyframes
 
 ## Setup Instructions
 
