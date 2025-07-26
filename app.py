@@ -15,6 +15,31 @@ personal_info = {
     'profile_photo': 'images/profile/profile.jpeg'
 }
 
+# Skills organized by category
+skills = {
+    'Programming Languages': ['Python', 'JavaScript', 'Java', 'C++', 'SQL'],
+    'Machine Learning': ['PyTorch', 'scikit-learn', 'TensorFlow', 'PySyft', 'Pandas', 'NumPy'],
+    'Web Development': ['Flask', 'Django', 'React', 'HTML/CSS', 'RESTful APIs', 'WebSockets'],
+    'Databases': ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
+    'DevOps & Tools': ['Docker', 'Git', 'AWS', 'Nginx', 'Celery', 'JWT'],
+    'Other': ['Data Analysis', 'System Design', 'Federated Learning', 'Edge Computing']
+}
+
+# Work Experience
+experience = [
+    {
+        'title': 'Machine Learning Developer',
+        'company': 'Personal Projects',
+        'duration': '2023 - Present',
+        'description': 'Developed privacy-preserving federated learning systems and full-stack web applications. Specialized in PyTorch implementations and Flask-based platforms.',
+        'achievements': [
+            'Built federated learning framework achieving 93% accuracy',
+            'Developed scalable web applications serving 500+ users',
+            'Implemented real-time ML systems with <500ms response times'
+        ]
+    }
+]
+
 # Sample projects
 projects = [
     {
@@ -63,7 +88,11 @@ projects = [
 
 @app.route('/')
 def index():
-    return render_template('index.html', personal_info=personal_info, projects=projects)
+    return render_template('index.html', 
+                         personal_info=personal_info, 
+                         projects=projects, 
+                         skills=skills, 
+                         experience=experience)
 
 @app.route('/download-resume')
 def download_resume():
