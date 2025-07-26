@@ -20,14 +20,14 @@ projects = [
     {
         'title': 'Privacy-Preserving Federated Learning in Social IoT',
         'description': 'Implemented PyTorch-based federated learning for decentralized IoT devices, enabling privacy-focused model training without raw data sharing. Achieved 93% accuracy on edge-based MNIST dataset, with only 5% drop from centralized methods.',
-        'image': 'images/projects/federated.jpg',
+        'image': 'images/projects/Federated.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Privacy_FL',
         'technologies': ['PyTorch', 'PySyft', 'Flask', 'WebSockets', 'Edge Computing']
     },
     {
         'title': 'Stock Market Alert System',
         'description': 'Real-time stock monitoring and alert system that tracks market movements and sends notifications based on user-defined criteria. Features automated data collection and intelligent alert mechanisms.',
-        'image': 'images/projects/stock_alert.jpg',
+        'image': 'images/projects/stock.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Stock-Market-Alert-System',
         'technologies': ['Python', 'API Integration', 'Real-time Data', 'Automation']
     },
