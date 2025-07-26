@@ -25,6 +25,13 @@ projects = [
         'technologies': ['PyTorch', 'PySyft', 'Flask', 'WebSockets', 'Edge Computing']
     },
     {
+        'title': 'Stock Market Alert System',
+        'description': 'Real-time stock monitoring and alert system that tracks market movements and sends notifications based on user-defined criteria. Features automated data collection and intelligent alert mechanisms.',
+        'image': 'images/projects/stock_alert.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/Stock-Market-Alert-System',
+        'technologies': ['Python', 'API Integration', 'Real-time Data', 'Automation']
+    },
+    {
         'title': 'Personal Finance Tracker',
         'description': 'Developed secure Flask-PostgreSQL platform for 500+ users, delivering real-time financial insights and reports. Designed dual authentication (sessions/JWT) and RESTful API with 15+ Swagger endpoints, reducing analysis time by 70%.',
         'image': 'images/projects/finance.jpg',
@@ -44,13 +51,6 @@ projects = [
         'image': 'images/projects/video_downloader.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Video-dowload',
         'technologies': ['Flask', 'Celery', 'Redis', 'yt-dlp', 'Cron Jobs', 'Task Queues']
-    },
-    {
-        'title': 'Stock Market Alert System',
-        'description': 'Real-time stock monitoring and alert system that tracks market movements and sends notifications based on user-defined criteria. Features automated data collection and intelligent alert mechanisms.',
-        'image': 'images/projects/stock_alert.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/Stock-Market-Alert-System',
-        'technologies': ['Python', 'API Integration', 'Real-time Data', 'Automation']
     },
     {
         'title': 'Portfolio Website',
