@@ -18,39 +18,46 @@ personal_info = {
 # Sample projects
 projects = [
     {
-        'title': 'Federated Learning for Privacy Preservation',
-        'description': 'A privacy-preserving federated learning framework leveraging functional encryption and Bayesian differential privacy for secure, efficient multiparty data sharing in social IoT environments.',
+        'title': 'Privacy-Preserving Federated Learning in Social IoT',
+        'description': 'Implemented PyTorch-based federated learning for decentralized IoT devices, enabling privacy-focused model training without raw data sharing. Achieved 93% accuracy on edge-based MNIST dataset, with only 5% drop from centralized methods.',
         'image': 'images/projects/federated.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Privacy_FL',
-        'technologies': ['Python', 'Machine Learning', 'Privacy']
+        'technologies': ['PyTorch', 'PySyft', 'Flask', 'WebSockets', 'Edge Computing']
     },
     {
-        'title': 'Portfolio Website',
-        'description': 'A modern portfolio website built with Flask and modern CSS.',
-        'image': 'images/projects/portfolio.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/Portfolio-Website',
-        'technologies': ['Python', 'Flask', 'HTML', 'CSS']
+        'title': 'Personal Finance Tracker',
+        'description': 'Developed secure Flask-PostgreSQL platform for 500+ users, delivering real-time financial insights and reports. Designed dual authentication (sessions/JWT) and RESTful API with 15+ Swagger endpoints, reducing analysis time by 70%.',
+        'image': 'images/projects/finance.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/Personal-Finance-Tracker',
+        'technologies': ['Python', 'Flask', 'PostgreSQL', 'Docker', 'JWT', 'Bootstrap 5', 'Plotly']
     },
     {
         'title': 'Movie Recommendation System',
-        'description': 'A content-based movie recommendation system using machine learning algorithms.',
+        'description': 'Created Python/Flask platform with scikit-learn for real-time, personalized movie suggestions. Engineered TF-IDF vectorization on 5,000+ TMDB entries with cosine similarity, hitting 87% accuracy on 200+ test cases under 500ms response.',
         'image': 'images/projects/movie.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Mov-Rec-Website',
-        'technologies': ['Python', 'Machine Learning', 'Pandas', 'Scikit-learn']
+        'technologies': ['Python', 'scikit-learn', 'Flask', 'AJAX', 'TF-IDF', 'Pandas']
     },
     {
-        'title': 'Video Downloader',
-        'description': 'A video downloader that allows users to download videos from a given YouTube URL.',
+        'title': 'YouTube Video Download Platform',
+        'description': 'Built full-stack Flask app using yt-dlp to manage 200+ concurrent downloads with 95% completion rate. Implemented Celery/Redis for asynchronous tasks and cron jobs for 95% storage efficiency via auto-cleanup.',
         'image': 'images/projects/video_downloader.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Video-dowload',
-        'technologies': ['Python', 'HTML']
+        'technologies': ['Flask', 'Celery', 'Redis', 'yt-dlp', 'Cron Jobs', 'Task Queues']
     },
     {
-        'title': 'Rock Paper Scissors Game',
-        'description': 'A rock paper scissors game that allows users to play against the computer.',
-        'image': 'images/projects/rps.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/rps',
-        'technologies': ['Python']
+        'title': 'Stock Market Alert System',
+        'description': 'Real-time stock monitoring and alert system that tracks market movements and sends notifications based on user-defined criteria. Features automated data collection and intelligent alert mechanisms.',
+        'image': 'images/projects/stock_alert.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/Stock-Market-Alert-System',
+        'technologies': ['Python', 'API Integration', 'Real-time Data', 'Automation']
+    },
+    {
+        'title': 'Portfolio Website',
+        'description': 'A modern, responsive portfolio website built with Flask and modern CSS. Features smooth animations, interactive elements, and optimized performance for showcasing professional work.',
+        'image': 'images/projects/portfolio.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/Portfolio-Website',
+        'technologies': ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript']
     }
 ]
 
@@ -70,4 +77,4 @@ def download_resume():
         return str(e), 404
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
