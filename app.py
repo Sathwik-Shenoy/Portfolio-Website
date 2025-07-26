@@ -28,6 +28,18 @@ skills = {
 # Work Experience
 experience = [
     {
+        'title': 'Research Intern',
+        'company': 'Bhabha Atomic Research Centre (BARC)',
+        'duration': '2024',
+        'description': 'Conducted cutting-edge research in nuclear science and technology at India\'s premier atomic research facility. Worked on advanced computational models and data analysis for nuclear applications.',
+        'achievements': [
+            'Developed computational models for nuclear physics simulations',
+            'Collaborated with senior researchers on classified projects',
+            'Published research findings in internal technical reports',
+            'Gained expertise in high-performance computing and scientific programming'
+        ]
+    },
+    {
         'title': 'Machine Learning Developer',
         'company': 'Personal Projects',
         'duration': '2023 - Present',
