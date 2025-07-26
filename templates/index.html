@@ -53,8 +53,8 @@
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
-                <h1 class="glitch" data-text="{{ personal_info.name }}">{{ personal_info.name }}</h1>
-                <p class="title">{{ personal_info.title }}</p>
+                <h1 class="hero-title">{{ personal_info.name }}</h1>
+                <p class="hero-subtitle">{{ personal_info.title }}</p>
                 <p class="description">{{ personal_info.description }}</p>
                 <div class="social-links">
                     <a href="{{ personal_info.linkedin }}" target="_blank" class="social-link" data-tooltip="LinkedIn">
@@ -105,19 +105,33 @@
                 <p class="section-subtitle">Get to know me better</p>
             </div>
             <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <p>I am a passionate developer with a strong foundation in machine learning and web development. My journey in technology has been driven by a curiosity to solve complex problems and create innovative solutions.</p>
-                    <p>My expertise spans across:</p>
-                    <ul class="skills-list">
-                        <li>Machine Learning & AI</li>
-                        <li>Full-Stack Web Development</li>
-                        <li>Python Programming</li>
-                        <li>Data Analysis</li>
-                    </ul>
+                <div class="about-text">
+                    <p>I'm a <strong>Machine Learning Engineer</strong> and <strong>Full-Stack Developer</strong> who bridges the gap between cutting-edge AI research and practical applications. My passion lies in creating intelligent systems that preserve privacy while delivering powerful insights.</p>
+                    
+                    <p>What sets me apart is my focus on <strong>privacy-preserving AI</strong> and <strong>federated learning</strong> - technologies that enable machine learning without compromising data security. I've successfully implemented systems that achieve 93% accuracy while keeping sensitive data distributed and secure.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Privacy-Preserving AI</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Full-Stack Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <span>Scalable Systems</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Federated Learning</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-stats" data-aos="fade-left">
+                <div class="about-stats">
                     <div class="stat-card">
-                        <div class="stat-number">4+</div>
+                        <div class="stat-number">6+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
@@ -125,7 +139,7 @@
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">10+</div>
+                        <div class="stat-number">15+</div>
                         <div class="stat-label">Technologies</div>
                     </div>
                 </div>
@@ -133,13 +147,13 @@
         </section>
 
         <section id="skills">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Technical Skills</h2>
                 <p class="section-subtitle">Technologies I work with</p>
             </div>
             <div class="skills-container">
                 {% for category, skill_list in skills.items() %}
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="skill-category">
                     <h3>{{ category }}</h3>
                     <div class="skills-list">
                         {% for skill in skill_list %}
@@ -152,13 +166,13 @@
         </section>
 
         <section id="experience">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Experience</h2>
                 <p class="section-subtitle">My professional journey</p>
             </div>
             <div class="experience-container">
                 {% for exp in experience %}
-                <div class="experience-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                <div class="experience-card">
                     <div class="experience-header">
                         <h3>{{ exp.title }}</h3>
                         <span class="company">{{ exp.company }}</span>
@@ -176,7 +190,7 @@
         </section>
 
         <section id="projects">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Featured Projects</h2>
                 <p class="section-subtitle">A collection of my best work</p>
             </div>
@@ -186,7 +200,7 @@
                 </div>
                 <div class="projects-grid">
                     {% for project in projects %}
-                    <div class="project-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <div class="project-card">
                         <div class="project-image">
                             <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}">
                             <div class="project-overlay">
@@ -219,32 +233,52 @@
         </section>
 
         <section id="contact">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <h2>Get in Touch</h2>
                 <p class="section-subtitle">Let's create something amazing together</p>
             </div>
             <div class="contact-content">
+                <div class="contact-form-container">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
                 <div class="contact-info">
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
                         <div class="card-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email</h3>
                         <a href="mailto:{{ personal_info.email }}">{{ personal_info.email }}</a>
                     </div>
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
                         <div class="card-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
                         <h3>LinkedIn</h3>
                         <a href="{{ personal_info.linkedin }}" target="_blank">Connect with me</a>
                     </div>
-                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
                         <div class="card-icon">
-                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-github"></i>
                         </div>
-                        <h3>Instagram</h3>
-                        <a href="{{ personal_info.instagram }}" target="_blank">Follow me</a>
+                        <h3>GitHub</h3>
+                        <a href="{{ personal_info.github }}" target="_blank">View my work</a>
                     </div>
                 </div>
             </div>
