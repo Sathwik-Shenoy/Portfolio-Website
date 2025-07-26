@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sathwik Shenoy - Machine Learning & Full-Stack Developer specializing in privacy-preserving AI, web development, and Python applications.">
+    <meta name="keywords" content="Machine Learning, Python, Flask, Web Development, AI, Federated Learning, Full Stack Developer">
+    <meta name="author" content="Sathwik Shenoy">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Sathwik Shenoy - ML & Full-Stack Developer">
+    <meta property="og:description" content="Passionate developer specializing in machine learning, web development, and privacy-preserving AI solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sathwik-shenoy.github.io/Portfolio-Website/">
+    
     <title>{{ personal_info.name }} - Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,6 +29,8 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -120,6 +132,49 @@
             </div>
         </section>
 
+        <section id="skills">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Technical Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-container">
+                {% for category, skill_list in skills.items() %}
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <h3>{{ category }}</h3>
+                    <div class="skills-list">
+                        {% for skill in skill_list %}
+                        <span class="skill-tag">{{ skill }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Experience</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="experience-container">
+                {% for exp in experience %}
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="{{ loop.index * 100 }}">
+                    <div class="experience-header">
+                        <h3>{{ exp.title }}</h3>
+                        <span class="company">{{ exp.company }}</span>
+                        <span class="duration">{{ exp.duration }}</span>
+                    </div>
+                    <p class="experience-description">{{ exp.description }}</p>
+                    <ul class="achievements">
+                        {% for achievement in exp.achievements %}
+                        <li>{{ achievement }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
         <section id="projects">
             <div class="section-header" data-aos="fade-up">
                 <h2>Featured Projects</h2>
@@ -139,7 +194,7 @@
                                     <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-link" data-tooltip="View on GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="#" class="project-link" data-tooltip="Live Demo">
+                                    <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-link" data-tooltip="View Project">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
