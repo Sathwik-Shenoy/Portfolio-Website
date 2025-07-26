@@ -9,7 +9,7 @@ personal_info = {
     'title': 'Machine Learning & Full-Stack Developer',
     'description': 'Passionate about building innovative solutions with expertise in machine learning, web development, and Python applications. Specializing in privacy-preserving AI and interactive web experiences.',
     'email': 'sathwikshenoy907@gmail.com',
-    'linkedin': 'https://www.linkedin.com/in/sathwik-shenoy-b278551b7//',
+    'linkedin': 'https://www.linkedin.com/in/sathwik-shenoy-b278551b7/',
     'instagram': 'https://www.instagram.com/sathwik_shenoy/',
     'github': 'https://github.com/Sathwik-Shenoy',
     'profile_photo': 'images/profile/profile.jpeg'
