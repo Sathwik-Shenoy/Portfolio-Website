@@ -1,52 +1,27 @@
-// Custom cursor
-const cursor = document.createElement('div');
-const cursorFollower = document.createElement('div');
-cursor.className = 'cursor';
-cursorFollower.className = 'cursor-follower';
-document.body.appendChild(cursor);
-document.body.appendChild(cursorFollower);
-
-let mouseX = 0;
-let mouseY = 0;
-let cursorX = 0;
-let cursorY = 0;
-let followerX = 0;
-let followerY = 0;
-
-// Initialize cursor position
-function initCursor() {
-    cursor.style.display = 'block';
-    cursorFollower.style.display = 'block';
-    cursor.style.left = '0px';
-    cursor.style.top = '0px';
-    cursorFollower.style.left = '0px';
-    cursorFollower.style.top = '0px';
-}
-
-// Update cursor position
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    
-    // Update cursor position immediately
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
 
-// Smooth cursor animation
-function animate() {
-    // Cursor follower animation
-    followerX += (mouseX - followerX) * 0.1;
-    followerY += (mouseY - followerY) * 0.1;
-    cursorFollower.style.left = followerX + 'px';
-    cursorFollower.style.top = followerY + 'px';
+// Mobile menu toggle
+const mobileMenu = document.querySelector('.mobile-menu');
+const navLinks = document.querySelector('.nav-links');
 
-    requestAnimationFrame(animate);
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
 }
-
-// Initialize cursor
-initCursor();
-animate();
 
 // Hide cursor when mouse leaves window
 document.addEventListener('mouseleave', () => {
