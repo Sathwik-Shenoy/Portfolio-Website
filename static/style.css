@@ -1760,4 +1760,24 @@ footer::before {
     .about-highlights {
         grid-template-columns: 1fr;
     }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-content {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
 } 
