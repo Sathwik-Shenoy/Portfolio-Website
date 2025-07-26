@@ -1,7 +1,8 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, request, flash, redirect, url_for
 import os
 
 app = Flask(__name__)
+app.secret_key = 'your-secret-key-here'  # Change this to a random secret key
 
 # Personal information
 personal_info = {
@@ -93,6 +94,29 @@ def index():
                          projects=projects, 
                          skills=skills, 
                          experience=experience)
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        subject = request.form.get('subject')
+        message = request.form.get('message')
+        
+        # Here you could integrate with email service like SendGrid, SMTP, etc.
+        # For now, we'll just simulate success
+        
+        # Log the contact form submission (in production, save to database or send email)
+        print(f"Contact form submission:")
+        print(f"Name: {name}")
+        print(f"Email: {email}")
+        print(f"Subject: {subject}")
+        print(f"Message: {message}")
+        
+        flash('Thank you for your message! I\'ll get back to you soon.', 'success')
+        return redirect(url_for('index') + '#contact')
+    
+    return redirect(url_for('index'))
 
 @app.route('/download-resume')
 def download_resume():
