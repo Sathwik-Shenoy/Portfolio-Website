@@ -142,7 +142,7 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <div class="stat-number">6+</div>
+                        <div class="stat-number">{{ project_count }}+</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
@@ -219,7 +219,7 @@
                                     <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-link" data-tooltip="View on GitHub">
                                         <i class="fab fa-github"></i>
                                     </a>
-                                    <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-link" data-tooltip="View Project">
+                                    <a href="{{ project.live_link or project.github_link }}" target="_blank" rel="noopener noreferrer" class="project-link" data-tooltip="View Project">
                                         <i class="fas fa-external-link-alt"></i>
                                     </a>
                                 </div>
