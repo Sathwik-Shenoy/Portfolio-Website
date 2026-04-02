@@ -55,11 +55,32 @@ experience = [
 # Sample projects
 projects = [
     {
+        'title': 'FairwayFund SaaS',
+        'description': 'Built an investor-ready SaaS platform where subscribers track golf scores, join monthly draws, and contribute to charity. Implemented subscription flows, role-based access, analytics dashboards, and secure winner-proof workflows.',
+        'image': 'images/projects/stock.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/golf-charity-saas',
+        'technologies': ['Next.js 14', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS', 'Framer Motion']
+    },
+    {
+        'title': 'P2P Watch Party (Video Streaming)',
+        'description': 'Developed a WebRTC peer-to-peer watch party platform where a host streams local media to a remote viewer with server-side signaling only. Added playback sync, chat, drift correction, and robust room constraints.',
+        'image': 'images/projects/video_downloader.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/Video-Streaming',
+        'technologies': ['WebRTC', 'Node.js', 'Express', 'Socket.io', 'Vanilla JavaScript', 'Data Channels']
+    },
+    {
         'title': 'Privacy-Preserving Federated Learning in Social IoT',
         'description': 'Implemented PyTorch-based federated learning for decentralized IoT devices, enabling privacy-focused model training without raw data sharing. Achieved 93% accuracy on edge-based MNIST dataset, with only 5% drop from centralized methods.',
         'image': 'images/projects/Federated.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Privacy_FL',
         'technologies': ['PyTorch', 'PySyft', 'Flask', 'WebSockets', 'Edge Computing']
+    },
+    {
+        'title': 'WebRTC Object Detection Demo',
+        'description': 'Engineered a real-time WebRTC pipeline for phone-camera streaming with live object detection overlays, metrics, and benchmarking. Supports browser-side WASM inference and server-side inference modes.',
+        'image': 'images/projects/Federated.jpg',
+        'github_link': 'https://github.com/Sathwik-Shenoy/webrtc-object-detection',
+        'technologies': ['WebRTC', 'Node.js', 'ONNX Runtime', 'WASM', 'Docker', 'Real-time Metrics']
     },
     {
         'title': 'Stock Market Alert System',
@@ -95,27 +116,6 @@ projects = [
         'image': 'images/projects/portfolio.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Portfolio-Website',
         'technologies': ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript']
-    },
-    {
-        'title': 'FairwayFund SaaS',
-        'description': 'Built an investor-ready SaaS platform where subscribers track golf scores, join monthly draws, and contribute to charity. Implemented subscription flows, role-based access, analytics dashboards, and secure winner-proof workflows.',
-        'image': 'images/projects/stock.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/golf-charity-saas',
-        'technologies': ['Next.js 14', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS', 'Framer Motion']
-    },
-    {
-        'title': 'P2P Watch Party (Video Streaming)',
-        'description': 'Developed a WebRTC peer-to-peer watch party platform where a host streams local media to a remote viewer with server-side signaling only. Added playback sync, chat, drift correction, and robust room constraints.',
-        'image': 'images/projects/video_downloader.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/Video-Streaming',
-        'technologies': ['WebRTC', 'Node.js', 'Express', 'Socket.io', 'Vanilla JavaScript', 'Data Channels']
-    },
-    {
-        'title': 'WebRTC Object Detection Demo',
-        'description': 'Engineered a real-time WebRTC pipeline for phone-camera streaming with live object detection overlays, metrics, and benchmarking. Supports browser-side WASM inference and server-side inference modes.',
-        'image': 'images/projects/Federated.jpg',
-        'github_link': 'https://github.com/Sathwik-Shenoy/webrtc-object-detection',
-        'technologies': ['WebRTC', 'Node.js', 'ONNX Runtime', 'WASM', 'Docker', 'Real-time Metrics']
     }
 ]
 
