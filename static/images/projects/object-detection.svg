@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">WebRTC Object Detection</title>
+  <desc id="desc">Abstract thumbnail for object detection streaming project</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="50%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="140" y="130" width="920" height="440" rx="26" fill="#111827" stroke="#5eead4" stroke-opacity="0.35"/>
+  <rect x="240" y="210" width="220" height="180" rx="18" fill="none" stroke="#34d399" stroke-width="5"/>
+  <rect x="520" y="250" width="300" height="220" rx="16" fill="none" stroke="#2dd4bf" stroke-width="5"/>
+  <rect x="860" y="220" width="120" height="90" rx="12" fill="none" stroke="#99f6e4" stroke-width="5"/>
+  <text x="170" y="615" fill="#dcfce7" font-size="50" font-family="Arial, Helvetica, sans-serif" font-weight="700">WEBRTC OBJECT DETECTION</text>
+  <text x="170" y="662" fill="#a7f3d0" font-size="26" font-family="Arial, Helvetica, sans-serif">Live phone camera stream with real-time overlay inference</text>
+</svg>

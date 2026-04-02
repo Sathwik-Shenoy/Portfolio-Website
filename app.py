@@ -56,63 +56,63 @@ experience = [
 projects = [
     {
         'title': 'FairwayFund SaaS',
-        'description': 'Built an investor-ready SaaS platform where subscribers track golf scores, join monthly draws, and contribute to charity. Implemented subscription flows, role-based access, analytics dashboards, and secure winner-proof workflows.',
-        'image': 'images/projects/stock.jpg',
+        'description': 'Investor-ready SaaS where subscribers track golf scores, enter draws, and fund real charity impact through every subscription.',
+        'image': 'images/projects/golf-charity-saas.svg',
         'github_link': 'https://github.com/Sathwik-Shenoy/golf-charity-saas',
         'technologies': ['Next.js 14', 'TypeScript', 'Supabase', 'Stripe', 'Tailwind CSS', 'Framer Motion']
     },
     {
         'title': 'P2P Watch Party (Video Streaming)',
-        'description': 'Developed a WebRTC peer-to-peer watch party platform where a host streams local media to a remote viewer with server-side signaling only. Added playback sync, chat, drift correction, and robust room constraints.',
-        'image': 'images/projects/video_downloader.jpg',
+        'description': 'A WebRTC watch-party app that streams host video peer-to-peer with synced playback, low-latency chat, and resilient room signaling.',
+        'image': 'images/projects/video-streaming.svg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Video-Streaming',
         'technologies': ['WebRTC', 'Node.js', 'Express', 'Socket.io', 'Vanilla JavaScript', 'Data Channels']
     },
     {
         'title': 'Privacy-Preserving Federated Learning in Social IoT',
-        'description': 'Implemented PyTorch-based federated learning for decentralized IoT devices, enabling privacy-focused model training without raw data sharing. Achieved 93% accuracy on edge-based MNIST dataset, with only 5% drop from centralized methods.',
+        'description': 'Federated learning system for decentralized IoT that trains private models without sharing raw data, reaching 93% edge accuracy.',
         'image': 'images/projects/Federated.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Privacy_FL',
         'technologies': ['PyTorch', 'PySyft', 'Flask', 'WebSockets', 'Edge Computing']
     },
     {
         'title': 'WebRTC Object Detection Demo',
-        'description': 'Engineered a real-time WebRTC pipeline for phone-camera streaming with live object detection overlays, metrics, and benchmarking. Supports browser-side WASM inference and server-side inference modes.',
-        'image': 'images/projects/Federated.jpg',
+        'description': 'Real-time phone-camera streaming with live object detection overlays, performance metrics, and dual WASM or server inference modes.',
+        'image': 'images/projects/object-detection.svg',
         'github_link': 'https://github.com/Sathwik-Shenoy/webrtc-object-detection',
         'technologies': ['WebRTC', 'Node.js', 'ONNX Runtime', 'WASM', 'Docker', 'Real-time Metrics']
     },
     {
         'title': 'Stock Market Alert System',
-        'description': 'Real-time stock monitoring and alert system that tracks market movements and sends notifications based on user-defined criteria. Features automated data collection and intelligent alert mechanisms.',
+        'description': 'Real-time stock monitoring platform with rule-based alerts, automated market ingestion, and smart signal-triggered notifications.',
         'image': 'images/projects/stock.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Stock-Market-Alert-System',
         'technologies': ['Python', 'API Integration', 'Real-time Data', 'Automation']
     },
     {
         'title': 'Personal Finance Tracker',
-        'description': 'Developed secure Flask-PostgreSQL platform for 500+ users, delivering real-time financial insights and reports. Designed dual authentication (sessions/JWT) and RESTful API with 15+ Swagger endpoints, reducing analysis time by 70%.',
+        'description': 'Secure Flask and PostgreSQL finance platform delivering real-time insights, JWT-backed APIs, and faster decision-ready reporting.',
         'image': 'images/projects/finance.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Personal-Finance-Tracker',
         'technologies': ['Python', 'Flask', 'PostgreSQL', 'Docker', 'JWT', 'Bootstrap 5', 'Plotly']
     },
     {
         'title': 'Movie Recommendation System',
-        'description': 'Created Python/Flask platform with scikit-learn for real-time, personalized movie suggestions. Engineered TF-IDF vectorization on 5,000+ TMDB entries with cosine similarity, hitting 87% accuracy on 200+ test cases under 500ms response.',
+        'description': 'Personalized movie recommendation platform using TF-IDF and cosine similarity for fast, real-time suggestion quality.',
         'image': 'images/projects/movie.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Mov-Rec-Website',
         'technologies': ['Python', 'scikit-learn', 'Flask', 'AJAX', 'TF-IDF', 'Pandas']
     },
     {
         'title': 'YouTube Video Download Platform',
-        'description': 'Built full-stack Flask app using yt-dlp to manage 200+ concurrent downloads with 95% completion rate. Implemented Celery/Redis for asynchronous tasks and cron jobs for 95% storage efficiency via auto-cleanup.',
+        'description': 'Async Flask downloader built for high concurrency with Celery and Redis orchestration, plus automated storage cleanup workflows.',
         'image': 'images/projects/video_downloader.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Video-dowload',
         'technologies': ['Flask', 'Celery', 'Redis', 'yt-dlp', 'Cron Jobs', 'Task Queues']
     },
     {
         'title': 'Portfolio Website',
-        'description': 'A modern, responsive portfolio website built with Flask and modern CSS. Features smooth animations, interactive elements, and optimized performance for showcasing professional work.',
+        'description': 'A modern Flask portfolio with polished UI, smooth interactions, and responsive storytelling for technical work.',
         'image': 'images/projects/portfolio.jpg',
         'github_link': 'https://github.com/Sathwik-Shenoy/Portfolio-Website',
         'technologies': ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript']

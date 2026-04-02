@@ -120,27 +120,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Hide cursor when mouse leaves window
 document.addEventListener('mouseleave', () => {
-    cursor.style.display = 'none';
-    cursorFollower.style.display = 'none';
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorFollower = document.querySelector('.custom-cursor-follower');
+    if (cursor && cursorFollower) {
+        cursor.style.display = 'none';
+        cursorFollower.style.display = 'none';
+    }
 });
 
 // Show cursor when mouse enters window
 document.addEventListener('mouseenter', () => {
-    cursor.style.display = 'block';
-    cursorFollower.style.display = 'block';
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorFollower = document.querySelector('.custom-cursor-follower');
+    if (cursor && cursorFollower) {
+        cursor.style.display = 'block';
+        cursorFollower.style.display = 'block';
+    }
 });
 
 // Add hover effect to interactive elements
 const interactiveElements = document.querySelectorAll('a, button, .project-card, .contact-card');
 interactiveElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorFollower = document.querySelector('.custom-cursor-follower');
+        if (cursor && cursorFollower) {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.2)';
+        }
     });
 
     element.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorFollower = document.querySelector('.custom-cursor-follower');
+        if (cursor && cursorFollower) {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
     });
 });
 
@@ -157,20 +173,22 @@ function scrollProjects(direction) {
     });
 }
 
-scrollLeftBtn.addEventListener('click', () => scrollProjects(-1));
-scrollRightBtn.addEventListener('click', () => scrollProjects(1));
+if (projectsContainer && scrollLeftBtn && scrollRightBtn) {
+    scrollLeftBtn.addEventListener('click', () => scrollProjects(-1));
+    scrollRightBtn.addEventListener('click', () => scrollProjects(1));
 
-// Hide/show scroll indicators based on scroll position
-projectsContainer.addEventListener('scroll', () => {
-    const isAtStart = projectsContainer.scrollLeft === 0;
-    const isAtEnd = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1;
+    // Hide/show scroll indicators based on scroll position
+    projectsContainer.addEventListener('scroll', () => {
+        const isAtStart = projectsContainer.scrollLeft === 0;
+        const isAtEnd = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1;
 
-    scrollLeftBtn.style.opacity = isAtStart ? '0.5' : '1';
-    scrollRightBtn.style.opacity = isAtEnd ? '0.5' : '1';
-});
+        scrollLeftBtn.style.opacity = isAtStart ? '0.5' : '1';
+        scrollRightBtn.style.opacity = isAtEnd ? '0.5' : '1';
+    });
 
-// Initialize scroll indicators
-scrollLeftBtn.style.opacity = '0.5';
+    // Initialize scroll indicators
+    scrollLeftBtn.style.opacity = '0.5';
+}
 
 // Ensure page starts from top when loaded
 window.addEventListener('load', function() {
